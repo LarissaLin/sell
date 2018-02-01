@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+    <style>
+      html *{
+        margin:0;
+        padding:0;
+      }
+      section{
+        margin-top: 20px;
+      }
+      section article div{
+        min-height: 100px;
+      }
+      .float article .left{
+        float: left;
+        background: red;
+        width: 300px;
+      }
+      .float article .right{
+        float: right;
+        background: blue;
+        width: 300px;
+      }
+      .float article .center{
+        background: yellow;
+        width:100%;
+      }
+      .absolute article{
+        position: relative;
+      }
+      .absolute article div{
+        position: absolute;
+      }
+      .absolute article .left{
+        left:0;
+        width:300px;
+        background: red;
+      }
+      .absolute article .right{
+        right:0;
+        width: 300px;
+        background: blue;
+      }
+      .absolute article .center{
+        right:300px;
+        left:300px;
+        background: yellow;
+      }
+    </style>
+</head>
+<body>
+  <section class="float">
+    <article>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        第一种布局
+      </div>
+    </article>
+  </section>
+  <section class="absolute">
+    <article>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        第一种布局
+      </div>
+    </article>
+  </section>
+
+  <style>
+    .flex{
+      margin-top: 140px;
+    }
+    .flex article{
+      width:100%;
+      display: flex;
+    }
+    .flex article .left{
+      width:300px;
+      background: red;
+    }
+    .flex article .right{
+      width:300px;
+      background: blue;
+    }
+    .flex article .center{
+      flex: 1;
+      background: yellow;
+    }
+    .table article{
+      display: table;
+      min-height: 100px;
+      width: 100%;
+    }
+    .table article div{
+      display: table-cell;
+    }
+    .table article .left{
+      width:300px;
+      background: red;
+    }
+    .table article .right{
+      width:300px;
+      background: blue;
+    }
+    .table article .center{
+      background: yellow;
+
+    }
+
+    .grid article{
+      display: grid;
+      width:100%;
+      grid-template-rows: 100px;
+      grid-template-columns: 300px auto 300px;
+    }
+    .grid article .left{
+      background: red;
+    }
+    .grid article .right{
+      background: blue;
+    }
+    .grid article .center{
+      background: yellow;
+    }
+  </style>
+  <section class="flex">
+    <article>
+      <div class="left"></div>
+      <div class="center">
+        第一种布局
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <section class="table">
+    <article>
+      <div class="left"></div>
+      <div class="center">
+        第一种布局
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <section class="grid">
+    <article>
+      <div class="left"></div>
+      <div class="center">
+        第一种布局
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+</body>
+</html>
